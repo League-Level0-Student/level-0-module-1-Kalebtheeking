@@ -29,12 +29,46 @@ public class RobotInSpace extends KeyboardAdapter {
 	 * code here - go to step 2
 	 */
 
+
 	private void moveRobot(int keyPressed) {
 		// 2. Print out the keyPressed variable and write down the numbers for
 		// each arrow key
 		
-		// 3. If the up arrow is pressed, move the Robot up the screen.
+		System.out.println(keyPressed);
 		
+		if (movingForward&!turningLeft&!turningRight) {
+			rob.setAngle(0);
+			rob.move(10);
+		}
+		if (turningRight&!movingBackward&!movingForward) {
+			rob.setAngle(90);
+			rob.move(10);
+			
+		}
+		if (turningLeft&!movingBackward&!movingForward) {
+			rob.setAngle(-90);
+			rob.move(10);	
+		}
+		if (movingBackward&!turningLeft&!turningRight) {
+			rob.setAngle(180);
+			rob.move(10);
+		}
+		if (movingBackward&turningLeft) {
+			rob.setAngle(230);
+			rob.move(10);
+		}
+		if (movingBackward&turningRight) {
+			rob.setAngle(120);
+			rob.move(10);
+		}
+		if (movingForward&turningRight) {
+			rob.setAngle(50);
+			rob.move(10);
+		}
+		if (movingForward&turningLeft) {
+			rob.setAngle(-50);
+			rob.move(10);
+		}
 		// 4. If the down arrow is pressed, move the Robot down.
 		
 		// 5. If the left arrow is pressed, make the Robot go left.
@@ -61,7 +95,7 @@ public class RobotInSpace extends KeyboardAdapter {
 		rob.addKeyboardAdapter(this);
 		Robot.setWindowImage("planet.jpg");
 		rob.penUp();
-		rob.setSpeed(10);
+		rob.setSpeed(1000);
 	}
 
 	@Override
