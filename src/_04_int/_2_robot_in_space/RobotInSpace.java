@@ -93,7 +93,7 @@ public class RobotInSpace extends KeyboardAdapter {
 
 	private void controlTheRobot() {
 		rob.addKeyboardAdapter(this);
-		Robot.setWindowImage("planet.jpg");
+		Robot.setWindowImage("raceTrack.jpg");
 		rob.penUp();
 		rob.setSpeed(1000);
 	}
