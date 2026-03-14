@@ -16,5 +16,26 @@ void draw() {
     ellipse(x, y + 95, 35, 35);
     fill(100, 100, 100);
     triangle(x, y + 10, x + 50, y + 100, x - 50, y + 100);
+  if (y<600){
+  y-=1; 
+}
 
+if (y<550){
+  y-=2; 
+}
+if (y<500){
+  y-=7; 
+}
+if (y<400){
+  y-=10; 
+}
+}
+
+void keyPressed(){
+  y-=3;
+}
+
+
+void mousePressed(){
+  y=600;
 }
