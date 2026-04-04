@@ -25,7 +25,7 @@ JOptionPane.showMessageDialog(null, "you know the stock market");
 
 }
 
-if (name.equalsIgnoreCase("collin")) {
+if (name.equalsIgnoreCase("colin")) {
 JOptionPane.showMessageDialog(null, "you are a nerd");		
 
 }
